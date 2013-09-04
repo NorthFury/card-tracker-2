@@ -1,6 +1,5 @@
 package north.magic.cardtracker.filter;
 
-import com.avaje.ebean.Expression;
 import com.avaje.ebean.Query;
 
 /**
@@ -9,5 +8,5 @@ import com.avaje.ebean.Query;
  */
 public interface Filter {
 
-    Expression buildExpression(Query query);
+    void apply(Query query);
 }

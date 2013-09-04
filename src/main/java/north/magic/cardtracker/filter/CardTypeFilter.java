@@ -1,7 +1,5 @@
 package north.magic.cardtracker.filter;
 
-import com.avaje.ebean.Expression;
-import com.avaje.ebean.ExpressionFactory;
 import com.avaje.ebean.Junction;
 import com.avaje.ebean.Query;
 import java.util.List;
@@ -19,12 +17,10 @@ public class CardTypeFilter implements Filter {
     }
 
     @Override
-    public Expression buildExpression(Query query) {
-        ExpressionFactory expressionFactory = query.getExpressionFactory();
-        Junction disjunction = expressionFactory.disjunction(query);
+    public void apply(Query query) {
+        Junction disjunction = query.where().disjunction();
         for (String type : values) {
             disjunction.contains("type", type);
         }
-        return disjunction;
     }
 }

@@ -3,7 +3,6 @@ package north.magic.cardtracker.service;
 import north.magic.cardtracker.filter.Filter;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
-import com.avaje.ebean.Junction;
 import com.avaje.ebean.Query;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +23,8 @@ public class CardSearchService {
         EbeanServer server = Ebean.getServer(null);
         Query<Card> query = server.find(Card.class);
 
-        Junction<Card> junction = query.where().conjunction();
         for (Filter filter : filters) {
-            junction.add(filter.buildExpression(query));
+            filter.apply(query);
         }
 
         query.setFirstRow(firstRow);

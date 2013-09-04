@@ -1,7 +1,5 @@
 package north.magic.cardtracker.filter;
 
-import com.avaje.ebean.Expression;
-import com.avaje.ebean.ExpressionFactory;
 import com.avaje.ebean.Query;
 
 /**
@@ -19,8 +17,7 @@ public class InsensitiveContainsFilter implements Filter {
     }
 
     @Override
-    public Expression buildExpression(Query query) {
-        ExpressionFactory expressionFactory = query.getExpressionFactory();
-        return expressionFactory.icontains(propertyName, value);
+    public void apply(Query query) {
+        query.where().icontains(propertyName, value);
     }
 }
