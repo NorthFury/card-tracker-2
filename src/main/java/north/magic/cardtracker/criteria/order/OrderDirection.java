@@ -1,4 +1,4 @@
-package north.magic.cardtracker.order;
+package north.magic.cardtracker.criteria.order;
 
 /**
  *

@@ -1,18 +1,19 @@
-package north.magic.cardtracker.order;
+package north.magic.cardtracker.criteria.order;
 
 import com.avaje.ebean.OrderBy;
 import com.avaje.ebean.Query;
+import north.magic.cardtracker.criteria.Modifier;
 
 /**
  *
  * @author North
  */
-public class BasicSearchOrder implements SearchOrder {
+public class ByPropertyOrder implements Modifier {
 
     private String propertyName;
     private OrderDirection direction;
 
-    public BasicSearchOrder(String propertyName, OrderDirection direction) {
+    public ByPropertyOrder(String propertyName, OrderDirection direction) {
         this.propertyName = propertyName;
         this.direction = direction;
     }
