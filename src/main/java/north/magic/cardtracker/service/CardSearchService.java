@@ -3,7 +3,6 @@ package north.magic.cardtracker.service;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
 import com.avaje.ebean.Query;
-import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.criteria.Criteria;
 import north.magic.cardtracker.domain.Card;
@@ -14,17 +13,9 @@ import north.magic.cardtracker.domain.Card;
  */
 public class CardSearchService {
 
-    public static List<Card> findCards(List<Criteria> filters, int firstRow, int maxRows) {
-        return findCards(filters, new ArrayList(), firstRow, maxRows);
-    }
-
-    public static List<Card> findCards(List<Criteria> filters, List<Criteria> criaterias, int firstRow, int maxRows) {
+    public static List<Card> findCards(List<Criteria> criaterias, int firstRow, int maxRows) {
         EbeanServer server = Ebean.getServer(null);
         Query<Card> query = server.find(Card.class);
-
-        for (Criteria filter : filters) {
-            filter.apply(query);
-        }
 
         query.setFirstRow(firstRow);
         query.setMaxRows(maxRows);
