@@ -2,7 +2,6 @@ package north.magic.cardtracker.criteria.filter;
 
 import north.magic.cardtracker.criteria.Modifier;
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.EbeanServer;
 import com.avaje.ebean.Junction;
 import com.avaje.ebean.Query;
 import java.util.List;
@@ -22,8 +21,7 @@ public class EditionFilter implements Modifier {
 
     @Override
     public void apply(Query query) {
-        EbeanServer server = Ebean.getServer(null);
-        Query<CardEdition> subquery = server.createQuery(CardEdition.class);
+        Query<CardEdition> subquery = Ebean.createQuery(CardEdition.class);
         subquery.select("card");
 
         Junction<CardEdition> disjunction = subquery.where().disjunction();
