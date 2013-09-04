@@ -5,10 +5,10 @@ import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
 import com.avaje.ebean.Junction;
 import com.avaje.ebean.Query;
+import java.util.ArrayList;
 import java.util.List;
+import north.magic.cardtracker.criteria.Criteria;
 import north.magic.cardtracker.domain.Card;
-import north.magic.cardtracker.order.NoSearchOrder;
-import north.magic.cardtracker.order.SearchOrder;
 
 /**
  *
@@ -17,11 +17,10 @@ import north.magic.cardtracker.order.SearchOrder;
 public class CardSearchService {
 
     public static List<Card> findCards(List<Filter> filters, int firstRow, int maxRows) {
-        NoSearchOrder noSearchOrder = new NoSearchOrder();
-        return findCards(filters, noSearchOrder, firstRow, maxRows);
+        return findCards(filters, new ArrayList(), firstRow, maxRows);
     }
 
-    public static List<Card> findCards(List<Filter> filters, SearchOrder order, int firstRow, int maxRows) {
+    public static List<Card> findCards(List<Filter> filters, List<Criteria> criaterias, int firstRow, int maxRows) {
         EbeanServer server = Ebean.getServer(null);
         Query<Card> query = server.find(Card.class);
 
@@ -33,7 +32,9 @@ public class CardSearchService {
         query.setFirstRow(firstRow);
         query.setMaxRows(maxRows);
 
-        order.apply(query);
+        for (Criteria criteria : criaterias) {
+            criteria.apply(query);
+        }
 
         return query.findList();
     }
