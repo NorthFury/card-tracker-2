@@ -6,7 +6,7 @@ import com.avaje.ebean.Query;
  *
  * @author North
  */
-public interface Criteria {
+public interface Modifier {
 
     void apply(Query query);
 }

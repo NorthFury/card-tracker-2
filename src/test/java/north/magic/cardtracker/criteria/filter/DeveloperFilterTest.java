@@ -1,10 +1,9 @@
 package north.magic.cardtracker.criteria.filter;
 
-import north.magic.cardtracker.criteria.Criteria;
 import java.util.ArrayList;
 import java.util.List;
+import north.magic.cardtracker.criteria.Modifier;
 import north.magic.cardtracker.domain.Card;
-import static north.magic.cardtracker.criteria.filter.BaseFilterTest.firstRow;
 import north.magic.cardtracker.service.CardSearchService;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +20,7 @@ public class DeveloperFilterTest extends BaseFilterTest {
         developers.add(1l);
         developers.add(2l);
 
-        ArrayList<Criteria> filters = new ArrayList<>();
+        ArrayList<Modifier> filters = new ArrayList<>();
         filters.add(new DeveloperFilter(developers));
 
         List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);

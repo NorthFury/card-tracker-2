@@ -1,13 +1,13 @@
 package north.magic.cardtracker.criteria.filter;
 
-import north.magic.cardtracker.criteria.Criteria;
+import north.magic.cardtracker.criteria.Modifier;
 import com.avaje.ebean.Query;
 
 /**
  *
  * @author North
  */
-public class EqualsFilter implements Criteria {
+public class EqualsFilter implements Modifier {
 
     private String propertyName;
     private Object value;
