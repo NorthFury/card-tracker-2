@@ -1,4 +1,4 @@
-package north.magic.cardtracker.filter;
+package north.magic.cardtracker.criteria.filter;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

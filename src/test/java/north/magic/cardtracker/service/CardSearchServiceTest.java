@@ -3,10 +3,10 @@ package north.magic.cardtracker.service;
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.domain.Card;
-import north.magic.cardtracker.filter.BaseFilterTest;
-import north.magic.cardtracker.filter.CardTypeFilter;
-import north.magic.cardtracker.filter.EqualsFilter;
-import north.magic.cardtracker.filter.Filter;
+import north.magic.cardtracker.criteria.filter.BaseFilterTest;
+import north.magic.cardtracker.criteria.filter.CardTypeFilter;
+import north.magic.cardtracker.criteria.filter.EqualsFilter;
+import north.magic.cardtracker.criteria.filter.Filter;
 import org.junit.Assert;
 import org.junit.Test;
 

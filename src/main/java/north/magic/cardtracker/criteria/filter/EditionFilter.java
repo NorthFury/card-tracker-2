@@ -1,4 +1,4 @@
-package north.magic.cardtracker.filter;
+package north.magic.cardtracker.criteria.filter;
 
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;

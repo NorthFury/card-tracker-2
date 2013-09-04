@@ -1,9 +1,9 @@
-package north.magic.cardtracker.filter;
+package north.magic.cardtracker.criteria.filter;
 
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.domain.Card;
-import static north.magic.cardtracker.filter.BaseFilterTest.firstRow;
+import static north.magic.cardtracker.criteria.filter.BaseFilterTest.firstRow;
 import north.magic.cardtracker.service.CardSearchService;
 import org.junit.Assert;
 import org.junit.Test;
