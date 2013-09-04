@@ -1,5 +1,6 @@
 package north.magic.cardtracker.criteria.filter;
 
+import north.magic.cardtracker.criteria.Criteria;
 import com.avaje.ebean.Query;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  *
  * @author North
  */
-public class DeveloperFilter implements Filter {
+public class DeveloperFilter implements Criteria {
 
     private List<Long> values;
 

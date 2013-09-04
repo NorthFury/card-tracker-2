@@ -1,5 +1,6 @@
 package north.magic.cardtracker.criteria.filter;
 
+import north.magic.cardtracker.criteria.Criteria;
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.domain.Card;
@@ -15,7 +16,7 @@ public class EqualsFilterTest extends BaseFilterTest {
 
     @Test
     public void testEqFilter() {
-        ArrayList<Filter> filters = new ArrayList<>();
+        ArrayList<Criteria> filters = new ArrayList<>();
         filters.add(new EqualsFilter("status.implemented", true));
 
         List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);

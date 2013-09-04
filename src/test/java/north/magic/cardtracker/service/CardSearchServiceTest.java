@@ -6,7 +6,7 @@ import north.magic.cardtracker.domain.Card;
 import north.magic.cardtracker.criteria.filter.BaseFilterTest;
 import north.magic.cardtracker.criteria.filter.CardTypeFilter;
 import north.magic.cardtracker.criteria.filter.EqualsFilter;
-import north.magic.cardtracker.criteria.filter.Filter;
+import north.magic.cardtracker.criteria.Criteria;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,7 +21,7 @@ public class CardSearchServiceTest extends BaseFilterTest {
         ArrayList<String> types = new ArrayList<>();
         types.add("Creature");
 
-        ArrayList<Filter> filters = new ArrayList<>();
+        ArrayList<Criteria> filters = new ArrayList<>();
         filters.add(new EqualsFilter("status.implemented", true));
         filters.add(new CardTypeFilter(types));
 

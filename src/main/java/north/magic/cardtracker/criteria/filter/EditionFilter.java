@@ -1,5 +1,6 @@
 package north.magic.cardtracker.criteria.filter;
 
+import north.magic.cardtracker.criteria.Criteria;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
 import com.avaje.ebean.Junction;
@@ -11,7 +12,7 @@ import north.magic.cardtracker.domain.CardEdition;
  *
  * @author North
  */
-public class EditionFilter implements Filter {
+public class EditionFilter implements Criteria {
 
     private List<String> codes;
 

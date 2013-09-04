@@ -1,5 +1,6 @@
 package north.magic.cardtracker.criteria.filter;
 
+import north.magic.cardtracker.criteria.Criteria;
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.domain.Card;
@@ -20,7 +21,7 @@ public class CardTypeFilterTest extends BaseFilterTest {
         types.add("Artifact");
         types.add("Land");
 
-        ArrayList<Filter> filters = new ArrayList<>();
+        ArrayList<Criteria> filters = new ArrayList<>();
         filters.add(new CardTypeFilter(types));
 
         List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
