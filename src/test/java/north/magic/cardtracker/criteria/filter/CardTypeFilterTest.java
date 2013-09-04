@@ -1,5 +1,6 @@
 package north.magic.cardtracker.criteria.filter;
 
+import north.magic.cardtracker.criteria.BaseModifierTest;
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.criteria.Modifier;
@@ -12,7 +13,7 @@ import org.junit.Test;
  *
  * @author North
  */
-public class CardTypeFilterTest extends BaseFilterTest {
+public class CardTypeFilterTest extends BaseModifierTest {
 
     @Test
     public void testCardTypeFilter() {

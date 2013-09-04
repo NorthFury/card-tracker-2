@@ -3,7 +3,7 @@ package north.magic.cardtracker.service;
 import java.util.ArrayList;
 import java.util.List;
 import north.magic.cardtracker.domain.Card;
-import north.magic.cardtracker.criteria.filter.BaseFilterTest;
+import north.magic.cardtracker.criteria.BaseModifierTest;
 import north.magic.cardtracker.criteria.filter.CardTypeFilter;
 import north.magic.cardtracker.criteria.filter.EqualsFilter;
 import north.magic.cardtracker.criteria.Modifier;
@@ -14,7 +14,7 @@ import org.junit.Test;
  *
  * @author North
  */
-public class CardSearchServiceTest extends BaseFilterTest {
+public class CardSearchServiceTest extends BaseModifierTest {
 
     @Test
     public void testCardSearchServiceWithMultipleFilters() {
