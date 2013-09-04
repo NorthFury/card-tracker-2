@@ -23,7 +23,7 @@ public class EditionFilterTest extends BaseFilterTest {
         ArrayList<Modifier> filters = new ArrayList<>();
         filters.add(new EditionFilter(editions));
 
-        List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
+        List<Card> cards = CardSearchService.findCards(filters);
 
         Assert.assertEquals(10, cards.size());
     }

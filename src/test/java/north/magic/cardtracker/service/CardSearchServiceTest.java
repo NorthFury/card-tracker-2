@@ -25,7 +25,7 @@ public class CardSearchServiceTest extends BaseFilterTest {
         filters.add(new EqualsFilter("status.implemented", true));
         filters.add(new CardTypeFilter(types));
 
-        List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
+        List<Card> cards = CardSearchService.findCards(filters);
         Assert.assertEquals(1, cards.size());
     }
 }

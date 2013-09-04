@@ -23,7 +23,7 @@ public class CardTypeFilterTest extends BaseFilterTest {
         ArrayList<Modifier> filters = new ArrayList<>();
         filters.add(new CardTypeFilter(types));
 
-        List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
+        List<Card> cards = CardSearchService.findCards(filters);
         Assert.assertEquals(4, cards.size());
     }
 }

@@ -19,7 +19,7 @@ public class ContainsFilterTest extends BaseFilterTest {
         ArrayList<Modifier> filters = new ArrayList<>();
         filters.add(new InsensitiveContainsFilter("subtype", "Illusion"));
 
-        List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
+        List<Card> cards = CardSearchService.findCards(filters);
         Assert.assertEquals(2, cards.size());
     }
 }

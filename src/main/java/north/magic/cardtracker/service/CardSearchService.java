@@ -13,12 +13,9 @@ import north.magic.cardtracker.domain.Card;
  */
 public class CardSearchService {
 
-    public static List<Card> findCards(List<Modifier> modifiers, int firstRow, int maxRows) {
+    public static List<Card> findCards(List<Modifier> modifiers) {
         EbeanServer server = Ebean.getServer(null);
         Query<Card> query = server.find(Card.class);
-
-        query.setFirstRow(firstRow);
-        query.setMaxRows(maxRows);
 
         for (Modifier modifier : modifiers) {
             modifier.apply(query);

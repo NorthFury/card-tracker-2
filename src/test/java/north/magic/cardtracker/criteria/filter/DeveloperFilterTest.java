@@ -23,7 +23,7 @@ public class DeveloperFilterTest extends BaseFilterTest {
         ArrayList<Modifier> filters = new ArrayList<>();
         filters.add(new DeveloperFilter(developers));
 
-        List<Card> cards = CardSearchService.findCards(filters, firstRow, maxRows);
+        List<Card> cards = CardSearchService.findCards(filters);
         Assert.assertEquals(4, cards.size());
     }
 }
