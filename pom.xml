@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>north.magic.cardtracker</groupId>
-    <artifactId>backend</artifactId>
-    <name>Card Tracker Backend Ebean</name>
+    <groupId>north.magic</groupId>
+    <artifactId>cardtracker</artifactId>
+    <name>Card Tracker 2</name>
     <version>2.0</version>
     <packaging>jar</packaging>
-    <description>Card Tracker</description>
+    <description>Card Tracker 2</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
