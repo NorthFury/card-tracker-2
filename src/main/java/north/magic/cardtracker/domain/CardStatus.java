@@ -17,8 +17,6 @@ public class CardStatus {
     @Column(nullable = false)
     private Boolean requested;
     @Column(nullable = false)
-    private Boolean tested;
-    @Column(nullable = false)
     private Boolean implemented;
     @Column(nullable = false)
     private Boolean bugged;
@@ -28,7 +26,6 @@ public class CardStatus {
     public CardStatus() {
         this.requested = false;
         this.implemented = false;
-        this.tested = false;
         this.bugged = false;
     }
 
@@ -62,14 +59,6 @@ public class CardStatus {
 
     public void setRequested(Boolean requested) {
         this.requested = requested;
-    }
-
-    public Boolean getTested() {
-        return tested;
-    }
-
-    public void setTested(Boolean tested) {
-        this.tested = tested;
     }
 
     public Boolean getBugged() {

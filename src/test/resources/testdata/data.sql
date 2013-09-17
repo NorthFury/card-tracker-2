@@ -3,19 +3,19 @@ INSERT INTO account (id, email, name, password) VALUES (2, 'dev@domain.com', 'de
 INSERT INTO account (id, email, name, password) VALUES (3, 'su@domain.com', 'su', '0cc175b9c0f1b6a831c399e269772661');
 
 
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (1, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (2, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (3, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (4, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (5, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (6, false, false, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (7, true, true, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (8, true, true, false, false, 1);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (9, false, true, false, false, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (10, false, false, false, false, 1);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (11, false, true, false, true, NULL);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (12, false, false, false, false, 2);
-INSERT INTO card_status (id, bugged, implemented, requested, tested, account_id) VALUES (13, false, false, false, false, 2);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (1, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (2, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (3, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (4, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (5, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (6, false, false, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (7, true, true, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (8, true, true, false, 1);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (9, false, true, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (10, false, false, false, 1);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (11, false, true, false, NULL);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (12, false, false, false, 2);
+INSERT INTO card_status (id, bugged, implemented, requested, account_id) VALUES (13, false, false, false, 2);
 
 
 INSERT INTO card (id, abilities, cmc, cost, name, other_side_id, power, subtype, supertype, toughness, type, status_id) VALUES (1, 'G', 0, '', 'Forest', NULL, NULL, 'Forest', 'Basic', NULL, 'Land', 1);
